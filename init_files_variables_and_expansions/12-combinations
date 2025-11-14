@@ -1,2 +1,2 @@
 #!/bin/bash
-printf %c%c\\n {{a..n},{p..z},o}{a..z} o{a..n} o{p..z}
+printf %c%c\\n {a..z}{a..z}|grep -v ^oo$
