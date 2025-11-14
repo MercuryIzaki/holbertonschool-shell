@@ -1,4 +1,3 @@
 #!/bin/bash
-for x in {a..z};do for y in {a..z};do [ $x$y != oo ]&&echo $x$y
-done
+for i in {a..z}{a..z};do [ $i != oo ]&&echo $i
 done
