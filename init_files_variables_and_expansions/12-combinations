@@ -1,4 +1,13 @@
-#!/bin/bash
-for i in {a..z}{a..z};do if [ $i != oo ];then echo $i
-fi
+#!/bin/bashов
+for i in {0..8}; do
+    for j in $(seq $((i+1)) 9); doи
+        if [[ $i -eq 8 && $j -eq 9 ]]; then
+            echo -n "$i$j"
+        else
+            echo -n "$i$j, "
+        fi
+    done
 done
+echo
+
+
