@@ -1,2 +1,3 @@
 #!/bin/bash
-for i in {a..z}{a..z};do case $i in oo) ;; *) echo $i;; esac;done
+for i in {a..z}{a..z};do [ $i = oo ] || echo $i
+done
