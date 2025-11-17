@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Parse Apache logs: IP and HTTP code
-awk '{print $1, $9}' apache-access.log | sort | uniq
+# File: 13-lets_parse_apache_logs – display IP and HTTP code only
+awk '{print $1" "$9}' apache-access.log | sort -u
