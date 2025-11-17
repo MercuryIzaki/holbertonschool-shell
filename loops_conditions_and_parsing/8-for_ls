@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Displays only the part of filenames after the first dash using for loop
+
+for file in *
+do
+    # Пропускаем скрытые файлы и проверяем, есть ли дефис
+    if [[ "$file" != .* && "$file" == *-* ]]
+    then
+        echo "${file#*-}"
+    elif [[ "$file" != .* && "$file" != *-* ]]
+    then
+        echo "$file"
+    fi
+done
