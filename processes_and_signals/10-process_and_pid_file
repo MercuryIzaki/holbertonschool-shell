@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Script that creates a PID file and handles signals
+
+# Записываем PID в файл (нужны права sudo при запуске скрипта)
+echo "$$" > /var/run/myscript.pid
+
+# Обработка SIGINT (Ctrl+C)
+trap 'echo "Y U no love me?!"' SIGINT
+
+# Обработка SIGTERM (pkill или kill)
+trap 'echo "I hate the kill command"; rm /var/run/myscript.pid; exit' SIGTERM
+
+# Обработка SIGQUIT
+trap 'rm /var/run/myscript.pid; exit' SIGQUIT
+
+# Бесконечный цикл
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
